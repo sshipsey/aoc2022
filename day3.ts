@@ -52,7 +52,7 @@ const priorities = [
   'W',
   'X',
   'Y',
-  'Z'
+  'Z',
 ] as const;
 
 type Priority = typeof priorities[number];
@@ -60,7 +60,7 @@ type Priority = typeof priorities[number];
 const prioritiesMap = priorities.reduce(
   (map: { [key in Priority]: number }, char, idx) => ({
     ...map,
-    [char]: idx + 1
+    [char]: idx + 1,
   }),
   {} as { [key in Priority]: number }
 );
